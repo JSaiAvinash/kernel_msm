@@ -925,8 +925,8 @@ static void __init bus_init(const struct l2_level *l2_level)
 		dev_err(drv.dev, "initial bandwidth req failed (%d)\n", ret);
 }
 
-#define MAX_VDD 1300
-#define MIN_VDD 700
+#define MAX_VDD 1350
+#define MIN_VDD 650
 
 ssize_t acpuclk_get_vdd_levels_str(char *buf)
 {
