@@ -352,12 +352,12 @@ static void __ref mako_hotplug_resume(struct work_struct *work)
 
 static void mako_hotplug_early_suspend(struct early_suspend *handler)
 {
-	queue_work_on(0, wq, &suspend);
+	schedule_work(&suspend);
 }
 
 static void mako_hotplug_late_resume(struct early_suspend *handler)
 {
-	queue_work_on(0, wq, &resume);
+	schedule_work(&resume);
 }
 
 static struct early_suspend early_suspend =
